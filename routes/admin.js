@@ -8,11 +8,12 @@ const path = require("path");
 const fs = require("fs");
 const crypto = require("crypto");
 
-const User = require("../models/User");
+const User = require("../models/user");
 const transporter = require("../config/mailer");
 
 const DEFAULT_CURRENCY = "USD";
-const JWT_SECRET = "libertytrustcapital_admin_secret";
+const JWT_SECRET = process.env.JWT_SECRET;
+
 
 // ================= UPLOAD SETUP =================
 const chatStorage = multer.diskStorage({
