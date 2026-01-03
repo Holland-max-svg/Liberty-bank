@@ -1,0 +1,156 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body {
+  background-color: #ffffff; /* white background */
+  color: #333;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001f3f; /* navy blue */
+  padding: 12px 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.menu li a.active,
+.menu li a:hover {
+  background-color: #003366;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* MAIN CONTENT */
+.main {
+  padding: 30px 40px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f3f3f3;
+}
+
+thead {
+  background-color: #001f3f;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVE / HAMBURGER ================= */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #001f3f;
+    transition: max-height 0.4s ease;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .menu.show {
+    max-height: 500px;
+  }
+
+  .menu li a {
+    padding: 15px 20px;
+    display: block;
+  }
+
+  /* Make table mobile-friendly */
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tbody tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    left: 15px;
+    width: 40%;
+    white-space: nowrap;
+    font-weight: bold;
+    content: attr(data-label);
+    box-sizing: border-box;
+  }
+}
+

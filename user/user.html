@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard - LTC</title>
+  <link rel="stylesheet" href="user.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header>
+    <div class="nav">
+      <div class="logo">LTC</div>
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">&#9776;</div>
+
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="user-dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="send-money.html">Send Money</a></li>
+          <li><a href="transactions.html">Transactions</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= DASHBOARD ================= -->
+  <div class="dashboard-container">
+    <div class="top-info">
+      <div class="account-number">
+        <h3>Account Number</h3>
+        <p id="accNumber">********1234</p>
+      </div>
+      <div class="balance">
+        <h3>Balance</h3>
+        <p id="balance">₦0.00</p>
+      </div>
+      <div class="contact-cs">
+        <button id="openChatBtn">Contact Customer Service</button>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button onclick="window.location.href='send-money.html'">Send Money</button>
+      <button onclick="window.location.href='transactions.html'">Transactions</button>
+    </div>
+
+    <section class="transactions">
+      <h2>Recent Transactions</h2>
+      <p id="recentEmpty">No transactions yet.</p>
+      <ul id="recentList" class="tx-list"></ul>
+    </section>
+  </div>
+
+  <!-- WhatsApp-style Chat -->
+  <div id="userChatContainer" class="whatsapp-chat hidden">
+    <div class="chat-header">
+      <span>Customer Service</span>
+      <span id="closeChat" style="cursor:pointer;">✖</span>
+    </div>
+    <div id="userChatMessages" class="chat-messages"></div>
+    <form id="userChatForm" class="chat-input-form" enctype="multipart/form-data">
+      <input type="text" id="userChatInput" placeholder="Type a message..." autocomplete="off" />
+      <input type="file" id="userChatFile" accept="image/*" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="auth-guard.js"></script>
+  <script src="user-dashboard.js"></script>
+
+  <script>
+    // Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

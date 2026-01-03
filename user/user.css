@@ -1,0 +1,239 @@
+/* GENERAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* ================= NAVBAR ================= */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001f3f; /* navy blue */
+  padding: 10px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.nav .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Menu */
+.nav .menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav .menu ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.nav .menu ul li a:hover,
+.nav .menu ul li a.active {
+  background-color: #003366;
+  border-radius: 4px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard-container {
+  padding: 20px 40px;
+}
+
+.top-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.account-number, .balance {
+  flex: 1;
+  min-width: 150px;
+}
+
+.contact-cs button {
+  padding: 10px 20px;
+  background-color: #25D366;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Action buttons */
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  flex: 1;
+  min-width: 150px;
+  padding: 15px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background-color: #001f3f;
+  color: white;
+}
+
+.action-buttons button:hover {
+  background-color: #003366;
+}
+
+/* Recent transactions */
+.transactions {
+  margin-top: 30px;
+}
+
+.transactions h2 {
+  margin-bottom: 10px;
+}
+
+/* WhatsApp chat */
+.whatsapp-chat {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  width: 350px;
+  max-width: 90%;
+  height: 500px;
+  background-color: #e5ddd5;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.whatsapp-chat.hidden {
+  display: none;
+}
+
+.chat-header {
+  background-color: #075e54;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  background-color: #ece5dd;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 70%;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 20px;
+  word-wrap: break-word;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.message.admin {
+  align-self: flex-start;
+  background-color: #ffffff;
+}
+
+.chat-input-form {
+  display: flex;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.chat-input-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.chat-input-form input[type="file"] {
+  margin-left: 5px;
+}
+
+.chat-input-form button {
+  padding: 10px 15px;
+  margin-left: 5px;
+  background-color: #25d366;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav .menu ul {
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #001f3f;
+    transition: max-height 0.4s ease;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .nav .menu.show ul {
+    max-height: 500px;
+  }
+
+  .nav .menu ul li a {
+    padding: 15px 20px;
+  }
+
+  .top-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+}

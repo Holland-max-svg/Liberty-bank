@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Liberty Trust Capital</title>
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    /* ================= NAVBAR ================= */
+    header {
+      background-color: #001f3f;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .logo-icon {
+      margin-right: 8px;
+    }
+
+    nav.menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav.menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav.menu {
+        display: none;
+        flex-direction: column;
+        background-color: #001f3f;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+      }
+      nav.menu.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+
+    /* ================= ABOUT SECTION ================= */
+    .about-container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .about-container h2 {
+      color: #001f3f;
+      margin-bottom: 20px;
+    }
+
+    .about-container img {
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+    .about-row {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .about-row.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .about-row img {
+      flex: 1 1 300px;
+    }
+
+    .about-row .text-block {
+      flex: 2 1 400px;
+    }
+
+    .customer-stories blockquote {
+      background: #e6e6e6;
+      padding: 15px 20px;
+      margin: 15px 0;
+      border-left: 5px solid #001f3f;
+    }
+
+    @media (max-width: 768px) {
+      .about-row, .about-row.reverse {
+        flex-direction: column;
+      }
+      .about-row img, .about-row .text-block {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* ================= FOOTER ================= */
+footer {
+  background-color: #000;
+  color: #ccc;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+footer h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+footer a:hover {
+  color: #007bff;
+}
+
+copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #777;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header>
+    <div class="logo">
+      <span class="logo-icon">&#127970;</span> Liberty Trust Capital
+    </div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <!-- ================= ABOUT US ================= -->
+  <div class="about-container">
+    <!-- Hero Image -->
+    <img src="lapi.jpeg" alt="Liberty Trust Capital">
+
+    <h2>About Us</h2>
+    <p>Welcome to Liberty Trust Capital– Your Trusted Modern Online Bank</p>
+
+    <p>At Liberty Trust Capital, we’re redefining banking for the digital age. As a fully online bank, we deliver seamless, secure, and innovative financial services through our intuitive mobile app and website – no branches, no hidden fees, just straightforward banking tailored to your lifestyle.</p>
+
+    <!-- Image for Backed by Strength -->
+    <div class="about-row">
+      <img src="spacex.jpeg" alt="Backed by Space X">
+      <div class="text-block">
+        <h3>Backed by Strength and Reputation</h3>
+        <p>Liberty Trust Capital is proudly affiliated with Space X, a renowned and established institution with a long-standing reputation for excellence, stability, and trust in the financial world. This powerful partnership forms the backbone of our operations, providing unparalleled security, regulatory compliance, and financial backing. By leveraging Space X’s decades of expertise and proven track record, we combine the agility of modern fintech with the reliability of traditional banking – giving you the best of both worlds.</p>
+      </div>
+    </div>
+
+    <h3>Our Mission</h3>
+    <p>To make banking simple, transparent, and empowering for everyone. We eliminate unnecessary costs and complexity, offering fee-free accounts, real-time insights, and advanced tools to help you take control of your finances.</p>
+
+    <!-- Image for Our Story -->
+    <div class="about-row reverse">
+      <div class="text-block">
+        <h3>Our Story</h3>
+        <p>Founded in Year, 2015 by a team of fintech visionaries, Liberty Trust Capital was created to address the frustrations of outdated banking systems. With the strong support and affiliation of Space X, we’ve rapidly grown into a trusted platform serving thousands of customers who value innovation backed by solid foundations.</p>
+      </div>
+      <img src="company.jpeg" alt="Our Story / Team">
+    </div>
+
+    <h3>What Sets Us Apart</h3>
+    <ul>
+      <li>No Hidden Fees: Transparent pricing with no overdrafts, maintenance charges, or surprises.</li>
+      <li>Mobile-First Design: An intuitive app for banking on the go, featuring instant notifications, budgeting tools, and effortless payments.</li>
+      <li>Uncompromising Security: Bank-grade encryption, biometric authentication, real-time fraud monitoring, and FDIC insurance through our established partners.</li>
+      <li>Innovative Features: Early direct deposits, automated savings round-ups, personalized insights, and more.</li>
+      <li>Inclusive Approach: Accessible banking for all, with a focus on financial education and user empowerment.</li>
+    </ul>
+
+    <h3>Customer Success Stories</h3>
+    <div class="customer-stories">
+      <blockquote>“Switching to Liberty Trust Capital was the best financial decision I’ve made. No more surprise fees eating into my paycheck, and the round-up savings feature helped me build an emergency fund without even noticing. Thanks to the app’s insights, I’ve saved over $2,000 this year!” – Sarah T., Freelancer</blockquote>
+      <blockquote>“As a young professional, traditional banks felt overwhelming. Liberty Trust Capital’s simple interface and early direct deposit have made managing my money stress-free. The security backed by Space X gives me total peace of mind.” – Alex R., Marketing Specialist</blockquote>
+      <blockquote>“I love how instant everything is – transfers, payments, and even customer support. It’s banking that fits my busy life, and the high-yield savings options are a game-changer for growing my money.” – Maria L., Small Business Owner</blockquote>
+    </div>
+
+    <p>Join a Community Built on Trust. We’re not just an app – we’re your reliable partner for financial success, strengthened by the reputation and stability of Space X. Whether saving, spending, or planning ahead, Liberty Trust Capital makes it effortless and secure. Open an account in minutes and experience banking elevated by trust and innovation. Join us today!</p>
+  </div>
+
+
+       <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>Contact</h4>
+        <p>123 Main St,<br />New York, NY 10001</p>
+        <p>Email: support@libertytrustbank.com</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="service.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div>
+        <h4>Liberty Trust Bank</h4>
+        <p>Your trusted financial partner.</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Liberty Trust Bank. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

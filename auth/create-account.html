@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Liberty Trust Capital - Create Account</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px; /* small padding for mobile */
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #001f4d;
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #001f4d;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    form .form-group {
+      margin-bottom: 15px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      color: #001f4d;
+      font-weight: 600;
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #001f4d;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #003366;
+    }
+
+    /* ================= MEDIA QUERIES ================= */
+    @media (max-width: 1024px) {
+      h1 { font-size: 24px; }
+      h2 { font-size: 18px; }
+    }
+
+    @media (max-width: 768px) {
+      .card { padding: 25px 20px; }
+      h1 { font-size: 22px; }
+      h2 { font-size: 16px; }
+      form input, form select { padding: 9px 10px; font-size: 14px; }
+      button { padding: 10px; font-size: 15px; }
+    }
+
+    @media (max-width: 480px) {
+      .card { padding: 20px 15px; }
+      h1 { font-size: 20px; }
+      h2 { font-size: 15px; }
+      form input, form select { padding: 8px 10px; font-size: 13px; }
+      button { padding: 8px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Liberty Trust Capital</h1>
+  <h2>Create Account</h2>
+
+  <form id="createAccountForm">
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="tel" placeholder="Enter your phone number" required>
+    </div>
+
+    <div class="form-group">
+      <label>Country</label>
+      <input type="text" placeholder="Enter your country" required>
+    </div>
+
+    <div class="form-group">
+      <label>State</label>
+      <input type="text" placeholder="Enter your state" required>
+    </div>
+
+    <div class="form-group">
+      <label>City</label>
+      <input type="text" placeholder="Enter your city" required>
+    </div>
+
+    <div class="form-group">
+      <label>Zipcode / Postal Code</label>
+      <input type="text" placeholder="Enter postal code" required>
+    </div>
+
+    <div class="form-group">
+      <label>Date of Birth</label>
+      <input type="date" required>
+    </div>
+
+    <div class="form-group">
+      <label>Employment Type</label>
+      <input type="text" placeholder="Enter your employment type" required>
+    </div>
+
+    <div class="form-group">
+      <label>Account Type</label>
+      <select required>
+        <option value="">Select Account Type</option>
+        <option value="checking">Checking</option>
+        <option value="savings">Savings</option>
+      </select>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById("createAccountForm");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Form submitted! (This is a static page; admin must create account)");
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liberty Trust Capital - Services</title>
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    /* ================= NAVBAR ================= */
+    header {
+      background-color: #001f3f; /* same blue */
+      color: white;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .menu.show {
+      display: block;
+    }
+
+    /* ================= SERVICES ================= */
+    .service-section {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .service-box {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .service-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* ensures full coverage without stretching */
+    }
+    .service-box .service-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 5px;
+      max-width: 90%;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 768px) {
+      .service-box {
+        height: 250px;
+      }
+      .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #001f3f;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 200px;
+        padding: 10px;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+
+    /* ================= FOOTER ================= */
+footer {
+  background-color: #000;
+  color: #ccc;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+footer h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+footer a:hover {
+  color: #007bff;
+}
+
+copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #777;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <span class="logo-icon">&#127970;</span>
+        Liberty Trust Capital
+      </div>
+
+      <!-- Hamburger for mobile -->
+      <div class="hamburger" id="hamburger">&#9776;</div>
+
+      <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="service.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="service-section">
+    <div class="service-box">
+      <img src="service.jpeg" alt="Secure Transfers">
+      <div class="service-text">
+        <h2>Secure Transfers</h2>
+        <p>Fast and protected money transfers worldwide.</p>
+      </div>
+    </div>
+    <div class="service-box">
+      <img src="Whatsapp.jpg" alt="Savings Accounts">
+      <div class="service-text">
+        <h2>Savings Accounts</h2>
+        <p>Grow your wealth with competitive interest rates.</p>
+      </div>
+    </div>
+    <div class="service-box">
+      <img src="woman.jpeg" alt="Mobile Banking">
+      <div class="service-text">
+        <h2>Mobile Banking</h2>
+        <p>Bank on the go with our secure mobile app.</p>
+      </div>
+    </div>
+    <div class="service-box">
+      <img src="on-phone.jpeg" alt="Loans & Credit">
+      <div class="service-text">
+        <h2>Loans & Credit</h2>
+        <p>Flexible loan options to suit your needs.</p>
+      </div>
+    </div>
+    <div class="service-box">
+      <img src="lapi.jpeg" alt="Investment Solutions">
+      <div class="service-text">
+        <h2>Investment Solutions</h2>
+        <p>Smart investment plans to grow your wealth.</p>
+      </div>
+    </div>
+  </section>
+
+
+       <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>Contact</h4>
+        <p>123 Main St,<br />New York, NY 10001</p>
+        <p>Email: support@libertytrustbank.com</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="service.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div>
+        <h4>Liberty Trust Bank</h4>
+        <p>Your trusted financial partner.</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Liberty Trust Bank. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('show'); // toggle menu for mobile
+    });
+  </script>
+</body>
+</html>

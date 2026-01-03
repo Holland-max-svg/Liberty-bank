@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liberty Trust Capital</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <span class="logo-icon">&#127970;</span>
+        Liberty Trust Capital
+      </div>
+
+      <!-- Hamburger for mobile -->
+      <div class="hamburger" id="hamburger">&#9776;</div>
+
+      <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="service.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>LTC</h1>
+      <p>Your Trusted Financial Partner</p>
+
+      <div class="hero-buttons">
+        <a href="auth/login.html" class="btn btn-login">Login</a>
+        <a href="auth/create-account.html" class="btn btn-create">Create Account</a>
+      </div>
+    </div>
+  </section>
+
+   <section class="about">
+    <h2>Aboout LTC</h2>
+    <p>
+      Liberty Trust Capital is committed to providing reliable, secure,
+      and innovative banking solutions for individuals and businesses.
+      We focus on trust, transparency, and technology to help you
+      achieve financial success.
+    </p>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <span class="service-icon">&#128179;</span>
+        <h3>Secure Transfers</h3>
+        <p>Fast and protected money transfers worldwide.</p>
+      </div>
+      <div class="service-box">
+        <span class="service-icon">&#128176;</span>
+        <h3>Savings Accounts</h3>
+        <p>Grow your wealth with competitive interest rates.</p>
+      </div>
+      <div class="service-box">
+        <span class="service-icon">&#128274;</span>
+        <h3>Advanced Security</h3>
+        <p>Bank with confidence using modern security systems.</p>
+      </div>
+    </div>
+  </section>
+
+      <section class="features">
+  <h2>Why Choose LTC?</h2>
+  <div class="feature-cards">
+    <div class="feature-card">
+      <img src="pay-me.jpeg" alt="Fast Transfer" />
+      <h3>Fast Transfers</h3>
+      <p>Send money instantly to any bank with secure, real-time transfers, low fees, and reliable confirmation anytime, anywhere on all devices.</p>
+    </div>
+    <div class="feature-card">
+      <img src="card.jpg" alt="Mobile Banking" />
+      <h3>Mobile Banking</h3>
+      <p>Manage your finances on the go with secure mobile access, transfers, alert and real-time account monitoring anytime anywhere.</p>
+    </div>
+    <div class="feature-card">
+      <img src="on-phone.jpeg" alt="Support" />
+      <h3>24/7 Support</h3>
+      <p>Get help anytime with our dedicated support team, offering fast responses, secure assistance, and reliable guidance to resolve issues and keep your banking smooth</p>
+    </div>
+    <div class="feature-card">
+  <img src="type.jpeg" alt="Advanced Security" />
+  <h3>Advanced Security</h3>
+  <p>
+    Protect your money with bank-grade encryption, multi-factor authentication,
+    real-time fraud monitoring, and secure infrastructure designed to keep your
+    account safe at all times.
+  </p>
+</div>
+
+<div class="feature-card">
+  <img src="touch.jpeg" alt="Transparent Banking" />
+  <h3>Transparent Banking</h3>
+  <p>
+    Enjoy clear, honest banking with no hidden fees, real-time transaction
+    tracking, instant notifications, and full visibility over your finances
+    anytime you log in.
+  </p>
+</div>
+
+  </div>
+</section>
+
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>Contact</h4>
+        <p>123 Main St,<br />New York, NY 10001</p>
+        <p>Email: support@libertytrustbank.com</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="service.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div>
+        <h4>Liberty Trust Bank</h4>
+        <p>Your trusted financial partner.</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Liberty Trust Bank. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('show'); // slide down menu
+    });
+  </script>
+
+</body>
+</html>

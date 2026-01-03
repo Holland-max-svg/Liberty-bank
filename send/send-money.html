@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Send Money - LTC</title>
+  <link rel="stylesheet" href="send-money.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header>
+    <div class="nav">
+      <div class="logo">LTC</div>
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">&#9776;</div>
+
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="user-dashboard.html">Dashboard</a></li>
+          <li><a href="send-money.html" class="active">Send Money</a></li>
+          <li><a href="transactions.html">Transactions</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <div class="main">
+    <h1>Send Money</h1>
+
+    <div class="tabs">
+      <div class="tab active" data-tab="domestic">Domestic Transfer (USA)</div>
+      <div class="tab" data-tab="international">International Transfer</div>
+    </div>
+
+    <!-- Domestic Transfer Form -->
+    <div id="domestic" class="tab-content active">
+      <form id="domesticForm" class="form-card">
+        <div class="form-group">
+          <label>Recipient Name</label>
+          <input type="text" id="domName" required />
+        </div>
+        <div class="form-group">
+          <label>Bank Name</label>
+          <input type="text" id="domBank" required />
+        </div>
+        <div class="form-group">
+          <label>Routing Number</label>
+          <input type="text" id="domRouting" required />
+        </div>
+        <div class="form-group">
+          <label>Account Number</label>
+          <input type="text" id="domAccount" required />
+        </div>
+        <div class="form-group">
+          <label>Account Type</label>
+          <select id="domAccountType" required>
+            <option value="">Select</option>
+            <option value="checking">Checking</option>
+            <option value="savings">Savings</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Amount (USD)</label>
+          <input type="number" id="domAmount" min="1" required />
+        </div>
+        <div class="form-group">
+          <label>Description / Memo</label>
+          <input type="text" id="domMemo" />
+        </div>
+
+        <!-- VIP OTP -->
+        <div class="form-group otp-group" style="display:none;">
+          <label>Enter OTP</label>
+          <input type="text" id="domOTP" placeholder="Enter OTP" />
+        </div>
+
+        <button type="submit">Send Domestic Transfer</button>
+        <p id="domMsg" class="msg"></p>
+      </form>
+    </div>
+
+    <!-- International Transfer Form -->
+    <div id="international" class="tab-content">
+      <form id="intlForm" class="form-card">
+        <div class="form-group">
+          <label>Recipient Name</label>
+          <input type="text" id="intlName" required />
+        </div>
+        <div class="form-group">
+          <label>Country</label>
+          <input type="text" id="intlCountry" required />
+        </div>
+        <div class="form-group">
+          <label>Bank Name</label>
+          <input type="text" id="intlBank" required />
+        </div>
+        <div class="form-group">
+          <label>SWIFT/BIC</label>
+          <input type="text" id="intlSwift" required />
+        </div>
+        <div class="form-group">
+          <label>Account Number / IBAN</label>
+          <input type="text" id="intlAccount" required />
+        </div>
+        <div class="form-group">
+          <label>Bank Address (optional)</label>
+          <input type="text" id="intlBankAddress" />
+        </div>
+        <div class="form-group">
+          <label>Amount (USD)</label>
+          <input type="number" id="intlAmount" min="1" required />
+        </div>
+        <div class="form-group">
+          <label>Purpose of Transfer</label>
+          <input type="text" id="intlPurpose" />
+        </div>
+
+        <!-- VIP OTP -->
+        <div class="form-group otp-group" style="display:none;">
+          <label>Enter OTP</label>
+          <input type="text" id="intlOTP" placeholder="Enter OTP" />
+        </div>
+
+        <button type="submit">Send International Transfer</button>
+        <p id="intlMsg" class="msg"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="../auth-guard.js"></script>
+  <script src="../send-money/send-money.js"></script>
+
+  <script>
+    // Tab switching
+    const tabs = document.querySelectorAll(".tab");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        tabContents.forEach(tc => tc.classList.remove("active"));
+        document.getElementById(tab.dataset.tab).classList.add("active");
+      });
+    });
+
+    // Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
+
